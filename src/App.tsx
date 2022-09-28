@@ -14,7 +14,7 @@ function App(props: postsType) {
     const [objFormRequestArr, setObjFormRequestArr] = useState([])
 
 
-    const getDeleteRequestHandler = () => {
+    const getRequestHandler = () => {
 
 /*        fetch('https://jsonplaceholder.typicode.com/posts')
             .then(response => response.json())
@@ -35,7 +35,7 @@ function App(props: postsType) {
 
     return (
         <div className="App">
-            <Button nickName={'CleanPage'} Callback={getDeleteRequestHandler}/>
+            <Button nickName={'CleanPage'} Callback={getRequestHandler}/>
             <p></p>
             <ul>
                 {objFormRequestArr.map((el: postsType) => {
