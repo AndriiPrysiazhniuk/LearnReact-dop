@@ -34,7 +34,7 @@ function App(props: postsType) {
 
     return (
         <div className="App">
-            <Button nickName={'CleanPage'} Callback={getRequestHandler}/>
+            <Button nickName={'CleanAllPage'} Callback={getRequestHandler}/>
             <p></p>
             <ul>
                 {objFormRequestArr.map((el: postsType,index) => {
