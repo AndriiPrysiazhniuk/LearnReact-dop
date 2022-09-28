@@ -16,9 +16,9 @@ function App(props: postsType) {
 
     const getRequestHandler = () => {
 
-/*        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(response => response.json())
-            .then(json => setObjFormRequestArr(json))*/
+        /*        fetch('https://jsonplaceholder.typicode.com/posts')
+                    .then(response => response.json())
+                    .then(json => setObjFormRequestArr(json))*/
 
         setObjFormRequestArr([])
 
@@ -29,8 +29,7 @@ function App(props: postsType) {
             fetch('https://jsonplaceholder.typicode.com/posts')
                 .then(response => response.json())
                 .then(json => setObjFormRequestArr(json))
-        },
-        []
+        }, []
     )
 
     return (
@@ -38,9 +37,9 @@ function App(props: postsType) {
             <Button nickName={'CleanPage'} Callback={getRequestHandler}/>
             <p></p>
             <ul>
-                {objFormRequestArr.map((el: postsType) => {
+                {objFormRequestArr.map((el: postsType,index) => {
                     return (
-                        <li>
+                        <li key={index}>
                             <span>{el.id + ' - '}</span>
                             <span>{el.userId + ' - '}</span>
                             <span>{el.title}</span>
