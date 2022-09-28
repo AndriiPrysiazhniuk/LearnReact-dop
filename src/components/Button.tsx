@@ -9,6 +9,8 @@ export const Button = (props: ButtonTypeProps) => {
         props.Callback()
     }
 
+
+
     return (
         <button onClick={onClickHandler}>{props.nickName}</button>
     )
