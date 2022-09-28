@@ -40,6 +40,8 @@ function App(props: postsType) {
                 {objFormRequestArr.map((el: postsType,index) => {
                     return (
                         <li key={index}>
+
+
                             <span>{el.id + ' - '}</span>
                             <span>{el.userId + ' - '}</span>
                             <span>{el.title}</span>
@@ -51,5 +53,6 @@ function App(props: postsType) {
         </div>
     );
 }
+
 
 export default App;
